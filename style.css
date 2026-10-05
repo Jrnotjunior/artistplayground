@@ -485,7 +485,7 @@ footer{
   border-left:1px solid rgba(255,255,255,.22);
 }
 .footer-col:first-child{padding-left:0;border-left:0}
-.footer-brand{
+.footer-logo{display:block;width:min(100%,220px);height:auto;margin:0 0 1rem}.footer-brand{
   font:700 1.8rem/1 var(--font-display);
   letter-spacing:-.02em;
   text-transform:none;
