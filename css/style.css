@@ -1,1 +1,4 @@
 @import url('../style.css');
+
+footer{background:var(--ink)!important;color:#fff!important}
+footer a{color:#fff}
