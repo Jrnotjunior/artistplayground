@@ -8,6 +8,7 @@
   --line:rgba(17,17,17,.18);
   --font-display:'Nunito Sans',sans-serif;
   --font-body:'Nunito Sans',sans-serif;
+  --page-gutter:clamp(28px,10vw,192px);
 }
 
 *{box-sizing:border-box}
@@ -37,7 +38,7 @@ a{color:inherit}
 button,input,select,textarea{font:inherit}
 img{max-width:100%}
 
-.container{width:min(1296px,calc(100% - 384px));margin-inline:auto}
+.container{width:calc(100% - (2 * var(--page-gutter)));margin-inline:auto}
 .sr-only{
   position:absolute;
   width:1px;
@@ -96,7 +97,7 @@ main>section.page-active>.container,
 main>section.page-active>.section-grid,
 main>section.page-active>.hero-grid,
 main>section.page-active>.contact-grid{
-  width:min(1296px,calc(100% - 384px));
+  width:calc(100% - (2 * var(--page-gutter)));
   margin-inline:auto;
 }
 main>section.page-active .hero-text{color:rgba(255,255,255,.86)}
@@ -292,7 +293,7 @@ nav a:hover,nav a.active{color:var(--yellow)}
 .highlight-grid,.news-grid,.point-grid,.class-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  width:min(1296px,calc(100% - 384px));
+  width:calc(100% - (2 * var(--page-gutter)));
   margin:3rem auto 0;
 }
 .highlight,.news-item,.point-grid article,.class-grid article{
@@ -372,7 +373,7 @@ nav a:hover,nav a.active{color:var(--yellow)}
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
-  width:min(1296px,calc(100% - 384px));
+  width:calc(100% - (2 * var(--page-gutter)));
   margin:3rem auto 0;
 }
 .production{
@@ -426,7 +427,7 @@ nav a:hover,nav a.active{color:var(--yellow)}
   display:grid;
   grid-template-columns:1.1fr .9fr;
   gap:clamp(3rem,6vw,6rem);
-  width:min(1296px,calc(100% - 384px));
+  width:calc(100% - (2 * var(--page-gutter)));
   margin-inline:auto;
 }
 .contact-cards{
