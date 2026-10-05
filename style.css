@@ -27,7 +27,7 @@ p{margin:0 0 1rem}
 
 .site-header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:3px solid var(--yellow)}
 .nav-shell{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
-.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;font:700 1.05rem var(--font-display);letter-spacing:.16em;text-transform:uppercase}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;font:700 1.05rem var(--font-display);letter-spacing:.16em;text-transform:uppercase}\n.brand-logo{width:auto;height:42px;max-width:150px;object-fit:contain;display:block}.brand-logo + span{display:none}
 .brand-mark{display:inline-flex;align-items:center;font:700 2rem/1 var(--font-display);letter-spacing:-.2em}
 .brand-mark b{color:var(--yellow)}.brand-mark i{color:var(--blue);font-style:normal}
 nav ul{display:flex;gap:1.8rem;list-style:none;padding:0;margin:0}
