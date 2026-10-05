@@ -84,7 +84,7 @@ main>section{
   height:calc(100svh - 76px - 270px);
   min-height:0!important;
   padding:28px 0!important;
-  overflow:hidden!important;
+  overflow:auto!important;
   background:var(--blue);
   color:var(--ink);
 }
