@@ -1,33 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Artist Playground | Arts & Performances</title>
-<meta name="description" content="Theater production company staging Philippine classics for schools and the public, with an acting school.">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#111111">
+<title>Artist Playground</title>
+<meta name="description" content="Artist Playground">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
- <div class="wrap bar" style="position:relative">
-  <a class="brand" id="brand" href="#home" aria-label="Home"></a>
-  <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-  <nav id="nav" aria-label="Main"><ul id="navlist"></ul></nav>
- </div>
-</header>
-<main>
- <section id="home"></section>
- <section id="about"></section>
- <section id="updates"></section>
- <section id="productions"></section>
- <section id="schools"></section>
- <section id="school"></section>
- <section id="contact"></section>
- <noscript><p class="wrap">Please enable JavaScript to view this site.</p></noscript>
-</main>
-<footer><div class="wrap foot" id="foot"></div></footer>
-<script src="js/content.js"></script>
-<script src="js/main.js"></script>
-</body>
-</html>
+<header class="site-header"><div class="container nav-shell">
+<a class="brand" id="brand" href="#home" aria-label="Home"></a>
+<button class="nav-toggle" id="menu" type="button" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+<nav id="nav" aria-label="Main navigation"><ul id="navlist"></ul></nav>
+</div></header>
+<main><section id="home"></section><section id="about"></section><section id="updates"></section><section id="productions"></section><section id="schools"></section><section id="school"></section><section id="contact"></section></main>
+<footer id="foot"></footer>
+<noscript><div class="noscript">Please enable JavaScript to view this site.</div></noscript>
+<script src="content.js"></script><script src="main.js"></script>
+</body></html>

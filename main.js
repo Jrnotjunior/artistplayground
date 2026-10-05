@@ -1,56 +1,17 @@
-(function () {
-  var S = window.SITE, $ = function (id) { return document.getElementById(id); };
-  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var mark = '<span class="mark"><b>A</b><i>P</i></span>';
-  var map = function (a, f) { return a.map(f).join(''); };
-
-  document.title = S.name + ' | ' + S.tagline;
-  $('brand').innerHTML = mark + '<span class="t">' + esc(S.name) + '</span>';
-  $('navlist').innerHTML = map(S.nav, function (n) { return '<li><a href="' + esc(n.href) + '">' + esc(n.label) + '</a></li>'; });
-
-  $('home').innerHTML = '<div class="wrap hero"><div><h1>' + esc(S.hero.title) + '</h1><p style="font-size:1.2rem">' + esc(S.hero.text) + '</p><div class="row">' +
-    map(S.hero.buttons, function (b) { return '<a class="btn alt" href="' + esc(b.href) + '">' + esc(b.label) + '</a>'; }) +
-    '</div></div><div class="big" aria-hidden="true"><b>A</b><i>P</i><small>' + esc(S.tagline) + '</small></div></div>';
-
-  $('about').innerHTML = '<div class="wrap split"><div><h2>About us</h2><p class="lead">' + esc(S.about.lead) + '</p>' +
-    map(S.about.paragraphs, function (p) { return '<p>' + esc(p) + '</p>'; }) + '</div><ul class="list">' +
-    map(S.about.highlights, function (h) { return '<li><strong>' + esc(h.title) + '</strong>' + esc(h.text) + '</li>'; }) + '</ul></div>';
-
-  var f = S.updates.featured;
-  $('updates').innerHTML = '<div class="wrap"><h2>Latest updates</h2><p class="lead">' + esc(S.updates.lead) + '</p>' +
-    '<div class="feature"><div class="date"><big>' + esc(f.day) + '</big>' + esc(f.month) + '</div><div><span class="tag">' + esc(f.label) +
-    '</span><h3>' + esc(f.title) + '</h3><p>' + esc(f.text) + '</p><a class="btn" href="' + esc(f.href) + '">' + esc(f.button) + '</a></div></div>' +
-    '<div class="news">' + map(S.updates.news, function (n) { return '<article><time>' + esc(n.when) + '</time><h3>' + esc(n.title) + '</h3><p>' + esc(n.text) + '</p></article>'; }) + '</div></div>';
-
-  $('productions').innerHTML = '<div class="wrap"><h2>Our productions</h2><p class="lead">' + esc(S.productions.lead) + '</p><div class="plays">' +
-    map(S.productions.plays, function (p) { return '<div class="play"><div class="top">' + esc(p.title) + '</div><div class="in"><p>' + esc(p.text) + '</p><span class="by">' + esc(p.by) + '</span></div></div>'; }) + '</div></div>';
-
-  $('schools').innerHTML = '<div class="wrap split"><div><h2>Shows for schools</h2><p class="lead">' + esc(S.schools.lead) + '</p><p>' + esc(S.schools.text) +
-    '</p><div class="row"><a class="btn alt" style="background:var(--paper)" href="#contact">' + esc(S.schools.button) + '</a></div></div><ul class="list">' +
-    map(S.schools.points, function (p) { return '<li><strong>' + esc(p.title) + '</strong>' + esc(p.text) + '</li>'; }) + '</ul></div>';
-
-  $('school').innerHTML = '<div class="wrap"><h2>Acting school</h2><p class="lead">' + esc(S.actingSchool.lead) + '</p><div class="classes">' +
-    map(S.actingSchool.classes, function (c) { return '<div><h3>' + esc(c.title) + '</h3><p>' + esc(c.text) + '</p></div>'; }) +
-    '</div><div class="row"><a class="btn" href="#contact">' + esc(S.actingSchool.button) + '</a></div></div>';
-
-  var c = S.contact;
-  $('contact').innerHTML = '<div class="wrap"><h2>Contact us</h2><p class="lead">' + esc(c.lead) + '</p><div class="cards">' +
-    map(c.cards, function (k) { return '<div><h3>' + esc(k.label) + '</h3><p>' + (k.href ? '<a href="' + esc(k.href) + '">' + esc(k.value) + '</a>' : esc(k.value)) + '</p></div>'; }) +
-    '</div><form id="f"><div><label for="n">Name</label><input id="n" required></div><div><label for="e">Your email</label><input id="e" type="email" required></div>' +
-    '<div><label for="t">I am asking about</label><select id="t">' + map(c.topics, function (t) { return '<option>' + esc(t) + '</option>'; }) + '</select></div>' +
-    '<div><label for="m">Message</label><textarea id="m" rows="4"></textarea></div><button class="btn" type="submit">Send message</button></form></div>';
-
-  $('foot').innerHTML = '<div><a class="brand" href="#home" style="color:#fff">' + mark + '<span class="t">' + esc(S.name) + '</span></a><p>' + esc(S.tagline) +
-    '</p><p>&copy; ' + new Date().getFullYear() + ' ' + esc(S.name) + '. All rights reserved.</p></div><ul aria-label="Footer">' +
-    map(S.nav.filter(function (n) { return n.href !== '#home'; }), function (n) { return '<li><a href="' + esc(n.href) + '">' + esc(n.label) + '</a></li>'; }) + '</ul>';
-
-  var b = $('menu'), nav = $('nav');
-  b.onclick = function () { var o = nav.classList.toggle('open'); b.setAttribute('aria-expanded', o); };
-  nav.onclick = function (e) { if (e.target.tagName === 'A') { nav.classList.remove('open'); b.setAttribute('aria-expanded', false); } };
-
-  $('f').onsubmit = function (e) {
-    e.preventDefault();
-    var body = 'Name: ' + $('n').value + '\nEmail: ' + $('e').value + '\n\n' + $('m').value;
-    location.href = 'mailto:' + c.email + '?subject=' + encodeURIComponent($('t').value) + '&body=' + encodeURIComponent(body);
-  };
+(function(){
+var S=window.SITE,$=function(id){return document.getElementById(id)},esc=function(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})},map=function(a,f){return(a||[]).map(f).join("")};
+var t=S.theme||{},c=t.colors||{},f=t.fonts||{};Object.keys(c).forEach(function(k){document.documentElement.style.setProperty("--"+k,c[k])});if(f.display)document.documentElement.style.setProperty("--font-display",f.display);if(f.body)document.documentElement.style.setProperty("--font-body",f.body);
+document.title=S.name+" | "+S.tagline;
+$("brand").innerHTML='<span class="brand-mark" aria-hidden="true"><b>A</b><i>P</i></span><span>'+esc(S.name)+'</span>';
+$("navlist").innerHTML=map(S.nav,function(n){return'<li><a href="'+esc(n.href)+'">'+esc(n.label)+'</a></li>'});
+$("home").innerHTML='<div class="hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">'+esc(S.hero.eyebrow)+'</p><h1>'+esc(S.hero.title)+'</h1><p class="hero-text">'+esc(S.hero.text)+'</p><div class="actions">'+map(S.hero.buttons,function(b){return'<a class="button '+esc(b.kind||"primary")+'" href="'+esc(b.href)+'">'+esc(b.label)+'</a>'})+'</div></div><div class="hero-art" aria-hidden="true"><div class="ap-shape"><span>A</span><strong>P</strong></div><div class="hero-note">'+esc(S.tagline)+'</div></div></div></div>';
+$("about").innerHTML='<div class="container section-grid"><div><p class="eyebrow">'+esc(S.about.eyebrow)+'</p><h2>'+esc(S.about.title)+'</h2></div><div><p class="lead">'+esc(S.about.lead)+'</p>'+map(S.about.paragraphs,function(p){return'<p>'+esc(p)+'</p>'})+'</div></div><div class="container highlight-grid">'+map(S.about.highlights,function(h,i){return'<article class="highlight"><span class="index">0'+(i+1)+'</span><h3>'+esc(h.title)+'</h3><p>'+esc(h.text)+'</p></article>'})+'</div>';
+var u=S.updates,f=u.featured;$("updates").innerHTML='<div class="container"><p class="eyebrow">'+esc(u.eyebrow)+'</p><h2>'+esc(u.title)+'</h2><p class="lead">'+esc(u.lead)+'</p><article class="featured-update"><div class="date-block"><strong>'+esc(f.day)+'</strong><span>'+esc(f.month)+'</span></div><div><span class="label">'+esc(f.label)+'</span><h3>'+esc(f.title)+'</h3><p>'+esc(f.text)+'</p><a class="text-link" href="'+esc(f.href)+'">'+esc(f.button)+' <span>→</span></a></div></article><div class="news-grid">'+map(u.news,function(n){return'<article class="news-item"><span>'+esc(n.when)+'</span><h3>'+esc(n.title)+'</h3><p>'+esc(n.text)+'</p></article>'})+'</div></div>';
+$("productions").innerHTML='<div class="container"><p class="eyebrow">'+esc(S.productions.eyebrow)+'</p><h2>'+esc(S.productions.title)+'</h2><p class="lead">'+esc(S.productions.lead)+'</p><div class="production-grid">'+map(S.productions.plays,function(p,i){return'<article class="production production-'+((i%4)+1)+'"><div class="production-number">0'+(i+1)+'</div><div><h3>'+esc(p.title)+'</h3><p>'+esc(p.text)+'</p><span>'+esc(p.by)+'</span></div></article>'})+'</div></div>';
+$("schools").innerHTML='<div class="container section-grid dark-on-blue"><div><p class="eyebrow">'+esc(S.schools.eyebrow)+'</p><h2>'+esc(S.schools.title)+'</h2></div><div><p class="lead">'+esc(S.schools.lead)+'</p><p>'+esc(S.schools.text)+'</p><a class="button dark" href="#contact">'+esc(S.schools.button)+'</a></div></div><div class="container point-grid">'+map(S.schools.points,function(p,i){return'<article><span>0'+(i+1)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.text)+'</p></article>'})+'</div>';
+$("school").innerHTML='<div class="container"><p class="eyebrow">'+esc(S.actingSchool.eyebrow)+'</p><h2>'+esc(S.actingSchool.title)+'</h2><p class="lead">'+esc(S.actingSchool.lead)+'</p><div class="class-grid">'+map(S.actingSchool.classes,function(x){return'<article><h3>'+esc(x.title)+'</h3><p>'+esc(x.text)+'</p></article>'})+'</div><a class="button primary" href="#contact">'+esc(S.actingSchool.button)+'</a></div>';
+var q=S.contact;$("contact").innerHTML='<div class="container contact-grid"><div><p class="eyebrow">'+esc(q.eyebrow)+'</p><h2>'+esc(q.title)+'</h2><p class="lead">'+esc(q.lead)+'</p><div class="contact-cards">'+map(q.cards,function(x){return'<div><span>'+esc(x.label)+'</span><p>'+(x.href?'<a href="'+esc(x.href)+'">'+esc(x.value)+'</a>':esc(x.value))+'</p></div>'})+'</div></div><form id="f" class="contact-form"><div><label for="n">Name</label><input id="n" required></div><div><label for="e">Email</label><input id="e" type="email" required></div><div><label for="t">I am asking about</label><select id="t">'+map(q.topics,function(x){return'<option>'+esc(x)+'</option>'})+'</select></div><div><label for="m">Message</label><textarea id="m" rows="5"></textarea></div><button class="button primary" type="submit">Send message</button><p class="form-note">This form opens your email application.</p></form></div>';
+$("foot").innerHTML='<div class="container footer-grid"><div><a class="footer-brand" href="#home">'+esc(S.name)+'</a><p>'+esc(S.tagline)+'</p></div><nav aria-label="Footer"><ul>'+map(S.nav,function(n){return'<li><a href="'+esc(n.href)+'">'+esc(n.label)+'</a></li>'})+'</ul></nav><div class="footer-copy">© '+new Date().getFullYear()+" "+esc(S.name)+".</div></div>";
+var menu=$("menu"),nav=$("nav");menu.onclick=function(){var o=nav.classList.toggle("open");menu.setAttribute("aria-expanded",o?"true":"false")};nav.onclick=function(e){if(e.target.tagName==="A"){nav.classList.remove("open");menu.setAttribute("aria-expanded","false")}};
+$("f").onsubmit=function(e){e.preventDefault();var body="Name: "+$("n").value+"\nEmail: "+$("e").value+"\n\n"+$("m").value;location.href="mailto:"+q.email+"?subject="+encodeURIComponent($("t").value)+"&body="+encodeURIComponent(body)};
 })();

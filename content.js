@@ -1,87 +1,12 @@
-/* Edit this file to change the website text. No need to touch index.html. */
-window.SITE = {
-  name: "Artist Playground",
-  tagline: "Arts & Performances",
-  nav: [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Latest Updates", href: "#updates" },
-    { label: "Productions", href: "#productions" },
-    { label: "For Schools", href: "#schools" },
-    { label: "Acting School", href: "#school" },
-    { label: "Contact", href: "#contact" }
-  ],
-  hero: {
-    title: "Classic Philippine stories, live on stage.",
-    text: "Artist Playground brings Rizal, Balagtas and the great Filipino epics to school auditoriums and theaters, and trains the next generation of actors.",
-    buttons: [
-      { label: "See upcoming shows", href: "#updates" },
-      { label: "Book for your school", href: "#schools" }
-    ]
-  },
-  about: {
-    lead: "Artist Playground is a theater production company for arts and performances.",
-    paragraphs: [
-      "We stage the Philippine literature students read in class, so those stories are seen, heard and felt. Our productions travel to schools and also play in public theaters.",
-      "We also run an acting school for students who want to learn the craft and perform."
-    ],
-    highlights: [
-      { title: "Stage productions", text: "Four classic Filipino works in our repertoire." },
-      { title: "School shows", text: "Performances booked directly by schools." },
-      { title: "Acting school", text: "Classes for beginners and returning students." }
-    ]
-  },
-  updates: {
-    lead: "News on our upcoming plays.",
-    featured: {
-      label: "Next show", day: "00", month: "Month 2026",
-      title: "Noli Me Tangere",
-      text: "Venue and time to be announced. Tickets and school bookings are now open by inquiry.",
-      button: "Ask about tickets", href: "#contact"
-    },
-    news: [
-      { when: "Coming soon", title: "El Filibusterismo", text: "Casting and rehearsal schedule will be posted here." },
-      { when: "Open now", title: "Acting school enrollment", text: "New batch is forming. Message us to reserve a slot." },
-      { when: "For schools", title: "Book a school show", text: "Choose a play and we will arrange a date with your school." }
-    ]
-  },
-  productions: {
-    lead: "Four works, each adapted for the stage and for student audiences.",
-    plays: [
-      { title: "Noli Me Tangere", by: "José Rizal", text: "Rizal's novel of love, abuse of power and a country awakening." },
-      { title: "El Filibusterismo", by: "José Rizal", text: "The sequel: Simoun's plan for revenge and its cost." },
-      { title: "Ibong Adarna", by: "Traditional korido", text: "The enchanted bird, three princes and a kingdom's healing." },
-      { title: "Florante at Laura", by: "Francisco Balagtas", text: "A tale of loyalty, betrayal and love told in verse." }
-    ]
-  },
-  schools: {
-    lead: "We sell our productions to schools. Bring the lesson to life for your whole grade level.",
-    text: "Tell us your play, your audience size and your preferred date. We will reply with availability and a quote.",
-    button: "Request a quote",
-    points: [
-      { title: "Choose your play", text: "Any of our four productions." },
-      { title: "We come to you", text: "Performed at your school or venue." },
-      { title: "Matches the curriculum", text: "Works students study in Filipino class." }
-    ]
-  },
-  actingSchool: {
-    lead: "Learn to perform with the people who make our shows.",
-    classes: [
-      { title: "Acting basics", text: "Voice, movement and stage presence." },
-      { title: "Script and character", text: "Reading a role and building it." },
-      { title: "Performance workshop", text: "Rehearse and perform for an audience." }
-    ],
-    button: "Enroll or ask for schedule"
-  },
-  contact: {
-    lead: "For school bookings, tickets and acting classes.",
-    email: "hello@artistplayground.example",
-    cards: [
-      { label: "Phone", value: "+63 000 000 0000", href: "tel:+630000000000" },
-      { label: "Email", value: "hello@artistplayground.example", href: "mailto:hello@artistplayground.example" },
-      { label: "Studio", value: "Street, City, Philippines" },
-      { label: "Facebook", value: "facebook.com/artistplayground", href: "https://facebook.com/artistplayground" }
-    ],
-    topics: ["School show booking", "Tickets", "Acting school", "Something else"]
-  }
-};
+/* Content and brand configuration live here. Layout code should remain reusable. */
+window.SITE={
+name:"Artist Playground",tagline:"Where artists play, and audiences discover.",
+theme:{colors:{yellow:"#FADF12",blue:"#01ACE0",ink:"#111111",paper:"#FFFFFF",soft:"#F5F5F2"},fonts:{display:"'Josefin Sans', sans-serif",body:"'Nunito Sans', sans-serif"}},
+nav:[{label:"About",href:"#about"},{label:"What's On",href:"#updates"},{label:"Productions",href:"#productions"},{label:"For Schools",href:"#schools"},{label:"Acting School",href:"#school"},{label:"Contact",href:"#contact"}],
+hero:{eyebrow:"Artist Playground",title:"Where artists play, and audiences discover.",text:"A home for performance, creativity, learning, and the people who bring stories to life.",buttons:[{label:"What's on",href:"#updates",kind:"primary"},{label:"Explore our work",href:"#productions",kind:"secondary"}]},
+about:{eyebrow:"Who we are",title:"A playground for artists. A place for audiences.",lead:"Artist Playground is a space for creative work, performance, learning, and discovery.",paragraphs:["We create opportunities for artists to play, explore, experiment, and share their work with audiences.","Our programs and productions bring artists, students, schools, and communities together through performance."],highlights:[{title:"Create",text:"Spaces and opportunities for artists to make work."},{title:"Perform",text:"Productions and performances for audiences."},{title:"Learn",text:"Workshops and learning through the arts."}]},
+updates:{eyebrow:"What's on",title:"Latest updates",lead:"Discover upcoming performances, programs, and announcements.",featured:{label:"Featured",day:"—",month:"Coming soon",title:"Upcoming Artist Playground activity",text:"Details about the next performance or program will appear here.",button:"Get in touch",href:"#contact"},news:[{when:"Update",title:"Productions",text:"New performances and projects will be announced here."},{when:"Update",title:"Programs",text:"Workshops, classes, and other programs will appear here."},{when:"Update",title:"Collaborations",text:"Creative collaborations and community activities will be shared here."}]},
+productions:{eyebrow:"Our work",title:"Productions",lead:"A growing body of performance work for different audiences and spaces.",plays:[{title:"Production title",by:"Artist Playground",text:"Production information can be added here."},{title:"Production title",by:"Artist Playground",text:"Production information can be added here."},{title:"Production title",by:"Artist Playground",text:"Production information can be added here."},{title:"Production title",by:"Artist Playground",text:"Production information can be added here."}]},
+schools:{eyebrow:"For schools",title:"Bring live performance to your students.",lead:"Programs can be adapted for schools, student audiences, and learning environments.",text:"Tell us about your school, audience, preferred program, and schedule. We can discuss the right format for your students.",button:"Start a conversation",points:[{title:"Performance",text:"Bring live work to your school or venue."},{title:"Learning",text:"Connect performance with classroom experiences."},{title:"Partnership",text:"Plan a program around your school's needs."}]},
+actingSchool:{eyebrow:"Learning",title:"Acting School",lead:"Develop your craft through practice, performance, and collaboration.",classes:[{title:"Acting",text:"Explore voice, movement, presence, and character."},{title:"Performance",text:"Work with scripts, scenes, rehearsal, and performance."},{title:"Workshops",text:"Join focused sessions designed around specific skills."}],button:"Ask about classes"},
+contact:{eyebrow:"Let's connect",title:"Make something with us.",lead:"For bookings, performances, classes, collaborations, and general inquiries.",email:"hello@artistplayground.example",cards:[{label:"Email",value:"hello@artistplayground.example",href:"mailto:hello@artistplayground.example"},{label:"Phone",value:"+63 000 000 0000",href:"tel:+630000000000"},{label:"Location",value:"Philippines"},{label:"Facebook",value:"facebook.com/artistplayground",href:"https://facebook.com/artistplayground"}],topics:["Production","School program","Acting school","Collaboration","General inquiry"]}};
