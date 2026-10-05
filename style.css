@@ -471,7 +471,7 @@ footer{
   width:100%;
   background:var(--ink);
   color:#fff;
-  padding:3.5rem 0 1.75rem;
+  padding:2.4rem 0 1.1rem;
 }
 .footer-grid{
   display:grid;
@@ -479,7 +479,7 @@ footer{
   gap:0;
 }
 .footer-col{
-  min-height:210px;
+  min-height:165px;
   padding:0 2rem;
   border-left:1px solid rgba(255,255,255,.22);
 }
