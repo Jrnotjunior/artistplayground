@@ -175,3 +175,10 @@ main>section.page-active>.container,main>section.page-active>.section-grid,main>
 h1{font-size:clamp(2.8rem,14vw,4.6rem)!important}
 h2{font-size:clamp(2.5rem,12vw,4rem)!important}
 }
+
+
+/* Taller footer with full content visibility */
+footer{padding:3.5rem 0 1.75rem!important}
+.footer-col{min-height:210px}
+main>section{height:calc(100svh - 76px - 270px)!important}
+@media(max-width:900px){main>section{height:auto!important;min-height:calc(100svh - 76px - 270px)!important}footer{padding:3rem 0 1.5rem!important}.footer-col{min-height:0}}
