@@ -137,3 +137,14 @@ h1,h2,h3{letter-spacing:-.018em!important;font-weight:700!important}
 nav a{border-radius:10px}
 footer{border-radius:24px 24px 0 0}
 @media(max-width:900px){body{overflow:auto}.page-active{overflow:auto!important}.hero,.hero-grid{border-radius:0}.hero:after{border-radius:40px 0 0 0}.production-grid{gap:12px}}
+
+/* Blue page surfaces and square footer */
+main>section.page-active{background:var(--blue)!important;color:var(--ink)}
+main>section.page-active .lead{color:rgba(17,17,17,.72)}
+main>section.page-active .eyebrow{color:var(--ink)}
+main>section.page-active .hero-text{color:rgba(255,255,255,.86)}
+main>section.page-active .contact-form input,main>section.page-active .contact-form select,main>section.page-active .contact-form textarea{background:#fff;color:var(--ink);border-color:rgba(17,17,17,.28)}
+main>section.page-active .contact-form label{color:var(--ink)}
+main>section.page-active .dark,main>section.page-active .contact{background:var(--blue);color:var(--ink)}
+footer{border-radius:0!important;background:var(--ink)!important;color:#fff!important}
+footer a{color:#fff}
