@@ -12,7 +12,8 @@
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:76px}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--font-body);overflow-x:hidden}
+body{margin:0;background:var(--soft);color:var(--ink);font:400 17px/1.65 var(--font-body);overflow-x:hidden}
+.site-header,main,footer{width:min(1500px,100%);margin-inline:auto}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.11;background-image:url("./assets/artist-playground-texture.jpg");background-size:360px auto;background-repeat:repeat}
 a{color:inherit}button,input,select,textarea{font:inherit}
 h1,h2,h3{font-family:var(--font-display);line-height:.96;margin:0}
@@ -27,7 +28,8 @@ p{margin:0 0 1rem}
 
 .site-header{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;border-bottom:3px solid var(--yellow)}
 .nav-shell{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
-.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;font:700 1.05rem var(--font-display);letter-spacing:.16em;text-transform:uppercase}\n.brand-logo{width:auto;height:42px;max-width:150px;object-fit:contain;display:block}.brand-logo + span{display:none}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;font:700 1.05rem var(--font-display);letter-spacing:.16em;text-transform:uppercase}
+.brand-logo{width:auto;height:42px;max-width:150px;object-fit:contain;display:block}.brand-logo + span{display:none}
 .brand-mark{display:inline-flex;align-items:center;font:700 2rem/1 var(--font-display);letter-spacing:-.2em}
 .brand-mark b{color:var(--yellow)}.brand-mark i{color:var(--blue);font-style:normal}
 nav ul{display:flex;gap:1.8rem;list-style:none;padding:0;margin:0}
