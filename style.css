@@ -632,3 +632,20 @@ footer{padding:1.5rem 0 .75rem}
 
 /* Visible social icons */
 .footer-social .social-icon{color:var(--ink);fill:currentColor}
+
+/* Social brand colors */
+.footer-social a:nth-child(1){
+  background:linear-gradient(135deg,#833AB4 0%,#E1306C 38%,#FD1D1D 62%,#F77737 80%,#FCAF45 100%);
+  color:#fff;
+}
+.footer-social a:nth-child(2){
+  background:#fff;
+  color:#000;
+}
+.footer-social a:nth-child(2) .social-icon{
+  filter:drop-shadow(2px 0 #25F4EE) drop-shadow(-2px 0 #FE2C55);
+}
+.footer-social a:nth-child(3){
+  background:#1877F2;
+  color:#fff;
+}
