@@ -116,20 +116,23 @@ main>section.page-active .hero-text{color:rgba(255,255,255,.86)}
   gap:2rem;
 }
 .brand{
-  display:flex;
-  align-items:center;
-  gap:.8rem;
+  display:block;
+  position:relative;
+  width:96px;
+  height:62px;
+  overflow:hidden;
   text-decoration:none;
-  font:700 1.05rem var(--font-display);
-  letter-spacing:.16em;
-  text-transform:uppercase;
 }
 .brand-logo{
+  position:absolute;
+  top:0;
+  left:50%;
   width:auto;
-  height:42px;
-  max-width:150px;
+  height:82px;
+  max-width:none;
   object-fit:contain;
   display:block;
+  transform:translateX(-50%);
 }
 .brand-logo + span{display:none}
 nav ul{
