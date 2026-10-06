@@ -86,8 +86,9 @@ main>section{
   min-height:calc(100svh - 76px);
   padding:28px 0!important;
   overflow:visible!important;
-  background:var(--blue);
-  color:var(--ink);
+  background:var(--ink);
+  color:#fff;
+  border-bottom:3px solid var(--yellow);
 }
 main>section.page-active{
   display:flex!important;
@@ -669,4 +670,29 @@ main>section .class-grid,
 main>section .production-grid,
 main>section .contact-grid{
   width:100%;
+}
+
+
+/* Dark page treatment */
+main>section .eyebrow,
+main>section h1,
+main>section h2,
+main>section h3{
+  color:#fff;
+}
+main>section .lead{
+  color:rgba(255,255,255,.78);
+}
+.hero{
+  background:var(--ink);
+  color:#fff;
+}
+.hero .eyebrow{color:#fff}
+.button.secondary{
+  color:#fff;
+  border-color:#fff;
+}
+.text-link{
+  color:#fff;
+  border-bottom-color:#fff;
 }
