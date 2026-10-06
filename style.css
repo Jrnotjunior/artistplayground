@@ -302,8 +302,10 @@ nav a:hover,nav a.active{color:var(--yellow)}
   min-height:0;
   padding:1.8rem;
   border-radius:18px;
-  background:rgba(255,255,255,.88);
-  box-shadow:0 8px 24px rgba(17,17,17,.08);
+  background:var(--blue);
+  color:var(--ink);
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:0 8px 24px rgba(0,0,0,.16);
 }
 .highlight:not(:first-child),.news-item:not(:first-child),.point-grid article:not(:first-child){
   border-left:1px solid var(--line);
