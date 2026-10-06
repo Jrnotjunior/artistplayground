@@ -652,3 +652,21 @@ footer{padding:1.5rem 0 .75rem}
   background:#1877F2;
   color:#fff;
 }
+
+/* Align every page with the header */
+main>section{
+  padding-left:var(--page-gutter)!important;
+  padding-right:var(--page-gutter)!important;
+}
+main>section>.container{
+  width:100%;
+  margin-inline:0;
+}
+main>section .highlight-grid,
+main>section .news-grid,
+main>section .point-grid,
+main>section .class-grid,
+main>section .production-grid,
+main>section .contact-grid{
+  width:100%;
+}
