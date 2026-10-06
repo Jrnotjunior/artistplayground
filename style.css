@@ -582,12 +582,12 @@ footer{
   .hero-grid{min-height:auto}
   .hero-art{height:260px;min-height:260px}
   .section-grid>div:first-child{position:static}
-  .highlight-grid,.news-grid,.point-grid,.class-grid{grid-template-columns:1fr;width:calc(100% - 40px)}
+  .highlight-grid,.news-grid,.point-grid,.class-grid{grid-template-columns:1fr;width:calc(100% - (2 * var(--page-gutter)))}
   .highlight,.highlight:not(:first-child),.news-item,.news-item:not(:first-child),.point-grid article,.class-grid article{
     border-left:0;
     border-bottom:1px solid var(--line);
   }
-  .production-grid{grid-template-columns:1fr;width:calc(100% - 40px)}
+  .production-grid{grid-template-columns:1fr;width:calc(100% - (2 * var(--page-gutter)))}
   .featured-update{grid-template-columns:120px 1fr}
   .contact-cards{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
