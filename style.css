@@ -623,3 +623,9 @@ footer{
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }
+
+/* Compact footer */
+.footer-logo{display:none!important}
+footer{padding:1.5rem 0 .75rem}
+.footer-col{min-height:115px}
+.footer-bottom{margin-top:1rem;padding-top:.75rem}
