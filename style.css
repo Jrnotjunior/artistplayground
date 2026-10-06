@@ -572,7 +572,7 @@ footer{
   main>section.page-active>.contact-grid{
     width:calc(100% - 40px);
   }
-  .container{width:min(100% - 40px,1240px)}
+  .container{width:calc(100% - (2 * var(--page-gutter)))}
   .nav-toggle{display:block}
   #nav{
     display:none;
@@ -622,7 +622,7 @@ footer{
   main>section.page-active>.contact-grid{
     width:calc(100% - 28px);
   }
-  .container{width:calc(100% - 28px)}
+  .container{width:calc(100% - (2 * var(--page-gutter)))}
   h1{font-size:clamp(2.8rem,14vw,4.6rem)}
   h2{font-size:clamp(2.5rem,12vw,4rem)}
   section{padding:4rem 0}
