@@ -295,6 +295,7 @@ nav a:hover,nav a.active{color:var(--yellow)}
 .highlight-grid,.news-grid,.point-grid,.class-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
   width:calc(100% - (2 * var(--page-gutter)));
   margin:3rem auto 0;
 }
