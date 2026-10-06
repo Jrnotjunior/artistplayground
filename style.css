@@ -6,8 +6,8 @@
   --soft:#F1F0EA;
   --muted:#5E5E5E;
   --line:rgba(17,17,17,.18);
-  --font-display:'Nunito Sans',sans-serif;
-  --font-body:'Nunito Sans',sans-serif;
+  --font-display:'Montserrat',sans-serif;
+  --font-body:'Montserrat',sans-serif;
   --page-gutter:clamp(28px,10vw,192px);
 }
 
