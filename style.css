@@ -629,3 +629,6 @@ footer{
 footer{padding:1.5rem 0 .75rem}
 .footer-col{min-height:115px}
 .footer-bottom{margin-top:1rem;padding-top:.75rem}
+
+/* Visible social icons */
+.footer-social .social-icon{color:var(--ink);fill:currentColor}
