@@ -81,6 +81,7 @@ main{
 }
 main>section{
   display:none!important;
+  flex-direction:column;
   width:100%;
   height:auto;
   min-height:calc(100svh - 76px);
