@@ -93,10 +93,7 @@ main>section.page-active{
   display:flex!important;
   align-items:center;
 }
-main>section.page-active>.container,
-main>section.page-active>.section-grid,
-main>section.page-active>.hero-grid,
-main>section.page-active>.contact-grid{
+main>section > .container{
   width:calc(100% - (2 * var(--page-gutter)));
   margin-inline:auto;
 }
@@ -566,12 +563,6 @@ footer{
     padding:24px 0!important;
   }
   main>section.page-active{display:block!important}
-  main>section.page-active>.container,
-  main>section.page-active>.section-grid,
-  main>section.page-active>.hero-grid,
-  main>section.page-active>.contact-grid{
-    width:calc(100% - 40px);
-  }
   .container{width:calc(100% - (2 * var(--page-gutter)))}
   .nav-toggle{display:block}
   #nav{
@@ -616,12 +607,6 @@ footer{
 
 @media(max-width:600px){
   body{font-size:16px}
-  main>section.page-active>.container,
-  main>section.page-active>.section-grid,
-  main>section.page-active>.hero-grid,
-  main>section.page-active>.contact-grid{
-    width:calc(100% - 28px);
-  }
   .container{width:calc(100% - (2 * var(--page-gutter)))}
   h1{font-size:clamp(2.8rem,14vw,4.6rem)}
   h2{font-size:clamp(2.5rem,12vw,4rem)}
